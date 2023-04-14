@@ -1,4 +1,4 @@
-name: release-solution-to-prod-reusable
+name: release-solution-to-sit-reusable
 # Reusable workflow
 # convert solution to managed (using a build PowerPlatform environment for the conversion)
 # upload the solution to the GitHub artifacts and deploy to the SIT environment
@@ -33,7 +33,7 @@ on:
         type: string
         required: true      
       SIT_ENVIRONMENT_URL: 
-        description: 'Production environment url.'
+        description: 'SIT environment url.'
         type: string
         required: true
       CLIENT_ID: 
