@@ -93,8 +93,8 @@ jobs:
     - name: Upload the ready to ship solution to GH artifact store
       uses: actions/upload-artifact@v2
       with:
-        name: managedSolutions
-        path: ${{ inputs.solution_shipping_folder}}/
+        name: ${{ inputs.solution_name }}.zip
+        path: ${{ inputs.solution_shipping_folder}}/${{ inputs.solution_name }}.zip
 
   release-to-staging:
     needs: [ convert-to-managed ]
@@ -110,8 +110,8 @@ jobs:
     - name: Fetch the ready to ship solution from GH artifact store
       uses: actions/download-artifact@v2
       with:
-        name: managedSolutions
-        path: ${{ inputs.solution_release_folder}}/
+        name: ${{ inputs.solution_name }}.zip
+        path: ${{ inputs.solution_release_folder}}/${{ inputs.solution_name }}.zip
     - name: Import solution to prod env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
