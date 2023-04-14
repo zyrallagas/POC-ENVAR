@@ -32,7 +32,7 @@ on:
         description: 'Build environment url.'
         type: string
         required: true      
-      PRODUCTION_ENVIRONMENT_URL: 
+      SIT_ENVIRONMENT_URL: 
         description: 'Production environment url.'
         type: string
         required: true
@@ -115,7 +115,7 @@ jobs:
     - name: Import solution to prod env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
-        environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
+        environment-url: ${{inputs.SIT_ENVIRONMENT_URL}}
         app-id: ${{inputs.CLIENT_ID}}
         client-secret: ${{ secrets.envSecret }}
         tenant-id: ${{inputs.TENANT_ID}}
