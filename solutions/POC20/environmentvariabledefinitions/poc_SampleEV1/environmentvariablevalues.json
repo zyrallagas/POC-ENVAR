@@ -1,0 +1,9 @@
+{
+  "environmentvariablevalues": {
+    "environmentvariablevalue": {
+      "@environmentvariablevalueid": "0afb8762-5eda-ed11-a7c7-000d3a79b8bf",
+      "iscustomizable": "1",
+      "value": "dev-value-1"
+    }
+  }
+}
