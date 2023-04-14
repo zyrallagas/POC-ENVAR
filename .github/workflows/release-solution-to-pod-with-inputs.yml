@@ -1,7 +1,7 @@
-name: release-solution-to-sit-reusable
+name: release-solution-to-prod-reusable
 # Reusable workflow
 # convert solution to managed (using a build PowerPlatform environment for the conversion)
-# upload the solution to the GitHub artifacts and deploy to the SIT environment
+# upload the solution to the GitHub artifacts and deploy to the PROD environment
 on:
   workflow_call:
     inputs: 
@@ -32,8 +32,8 @@ on:
         description: 'Build environment url.'
         type: string
         required: true      
-      SIT_ENVIRONMENT_URL: 
-        description: 'SIT environment url.'
+      PRODUCTION_ENVIRONMENT_URL: 
+        description: 'Production environment url.'
         type: string
         required: true
       CLIENT_ID: 
@@ -115,7 +115,7 @@ jobs:
     - name: Import solution to prod env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
-        environment-url: ${{inputs.SIT_ENVIRONMENT_URL}}
+        environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
         app-id: ${{inputs.CLIENT_ID}}
         client-secret: ${{ secrets.envSecret }}
         tenant-id: ${{inputs.TENANT_ID}}
