@@ -14,8 +14,8 @@ jobs:
       #You can specify the solution name here
       solution_name: POC20
       #Update your values here
-      BUILD_ENVIRONMENT_URL: https://poc-cicd-dev.crm6.dynamics.com
-      SIT_ENVIRONMENT_URL: https://poc-cicd-sit.crm6.dynamics.com/
+      BUILD_ENVIRONMENT_URL: https://poc-cicd-build.crm6.dynamics.com
+      SIT_ENVIRONMENT_URL: https://poc-cicd-sit.crm6.dynamics.com
       CLIENT_ID: 85abe0fb-a7a4-4c08-bec5-4eabafdd0c5f
       TENANT_ID: 308dd0b4-7b44-49d9-8eb5-c85a015a228a    
     secrets:
