@@ -94,7 +94,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: managedSolutions
-        path: ${{ inputs.solution_shipping_folder}}/
+        path: ${{ inputs.solution_shipping_folder}}
 
   release-to-staging:
     needs: [ convert-to-managed ]
